@@ -1,5 +1,7 @@
 # Asciiloscope ∿
 
+![Demo](screenshot.png)
+
 **Asciiloscope** is a real-time, low-latency audio visualizer for the Linux terminal. It simulates the aesthetic of vintage CRT oscilloscopes using ASCII characters.
 
 ![Status](https://img.shields.io/copr/v/altaugust/asciiloscope?label=Fedora%20Build&style=flat-square)

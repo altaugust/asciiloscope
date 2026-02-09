@@ -1,6 +1,6 @@
 Name:           asciiloscope
 Version:        1.0.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Terminal-based audio oscilloscope visualizer
 
 License:        MIT
@@ -14,6 +14,7 @@ BuildRequires:  pulseaudio-libs-devel
 
 Requires:       ncurses
 Requires:       pulseaudio-libs
+Requires:       pulseaudio-utils
 
 %description
 Asciiloscope is a low-latency audio visualizer for the terminal.
