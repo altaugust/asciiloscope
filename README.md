@@ -14,12 +14,32 @@
 * **Theming:** Multiple phosphor color emulations (Green, Amber, Cyan, Red, White).
 * **Lightweight:** Zero graphical dependencies (runs in TTY).
 
-## 🚀 Installation (Fedora / RHEL)
+### 🚀 Installation
 
-Enable the COPR repository and install:
+### ⚡ Quick Install (Recommended)
+Works on **Fedora**, **Ubuntu**, **Debian**, **Linux Mint**, and **Pop!_OS**.
+
+Run this single command in your terminal:
 
 ```bash
-sudo dnf copr enable altaugust/asciiloscope -y && sudo dnf install asciiloscope -y
+curl -sSL [https://raw.githubusercontent.com/altaugust/asciiloscope/main/install.sh](https://raw.githubusercontent.com/altaugust/asciiloscope/main/install.sh) | bash
+```
+
+### 📦 Manual Install
+
+If you prefer to install manually using your package manager:
+
+#### Fedora / RHEL / CentOS
+```bash
+sudo dnf copr enable altaugust/asciiloscope -y
+sudo dnf install asciiloscope -y
+```
+
+#### Ubuntu / Linux Mint / Pop!_OS / Debian
+```bash
+sudo add-apt-repository ppa:altaugust/asciiloscope -y
+sudo apt update
+sudo apt install asciiloscope -y
 ```
 
 ## 🎮 Controls
