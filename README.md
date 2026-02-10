@@ -22,7 +22,7 @@ Works on **Fedora**, **Ubuntu**, **Debian**, **Linux Mint**, and **Pop!_OS**.
 Run this single command in your terminal:
 
 ```bash
-curl -sSL [https://raw.githubusercontent.com/altaugust/asciiloscope/main/install.sh](https://raw.githubusercontent.com/altaugust/asciiloscope/main/install.sh) | bash
+curl -sSL https://raw.githubusercontent.com/altaugust/asciiloscope/main/install.sh | bash
 ```
 
 ### 📦 Manual Install
