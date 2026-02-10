@@ -1,35 +1,33 @@
 Name:           asciiloscope
 Version:        1.0.1
 Release:        1%{?dist}
-Summary:        Terminal-based audio oscilloscope visualizer
+Summary:        A real-time, low-latency audio visualizer for the Linux terminal
 
 License:        MIT
 URL:            https://github.com/altaugust/asciiloscope
-Source0:        %{name}-%{version}.tar.gz
+Source0:        %{url}/archive/main.tar.gz
 
 BuildRequires:  gcc-c++
 BuildRequires:  cmake
 BuildRequires:  ncurses-devel
 BuildRequires:  pulseaudio-libs-devel
 
-Requires:       ncurses
-Requires:       pulseaudio-libs
-Requires:       pulseaudio-utils
-
 %description
-Asciiloscope is a low-latency audio visualizer for the terminal.
-It simulates the aesthetic of old CRT oscilloscopes, supporting
-Waveform and XY (Lissajous) visualization modes.
+Asciiloscope is a terminal-based audio visualizer that simulates the aesthetic 
+of vintage CRT oscilloscopes using ASCII characters.
 
 %prep
-%autosetup
+# O COPR build-scm já baixa o código, mas o %setup garante que entramos na pasta certa
+%setup -c -T
 
 %build
+# Compilação padrão via CMake
 %cmake
 %cmake_build
 
 %install
 %cmake_install
+# Garante a instalação do manual que você criou
 install -Dp -m 644 debian/asciiloscope.1 %{buildroot}%{_mandir}/man1/asciiloscope.1
 
 %files
@@ -41,6 +39,7 @@ install -Dp -m 644 debian/asciiloscope.1 %{buildroot}%{_mandir}/man1/asciiloscop
 %changelog
 * Tue Feb 10 2026 Pedro Augusto <pedroaugustop@protonmail.com> - 1.0.1-1
 - Added official manpage documentation
+- Updated build dependencies for Fedora
 
 * Mon Feb 09 2026 Pedro Augusto <pedroaugustop@protonmail.com> - 1.0.0-1
 - Initial Gold Master release
