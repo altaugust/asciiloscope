@@ -1,6 +1,6 @@
 Name:           asciiloscope
-Version:        1.0.0
-Release:        2%{?dist}
+Version:        1.0.1
+Release:        1%{?dist}
 Summary:        Terminal-based audio oscilloscope visualizer
 
 License:        MIT
@@ -30,12 +30,17 @@ Waveform and XY (Lissajous) visualization modes.
 
 %install
 %cmake_install
+install -Dp -m 644 debian/asciiloscope.1 %{buildroot}%{_mandir}/man1/asciiloscope.1
 
 %files
 %license LICENSE
 %doc README.md
 %{_bindir}/asciiloscope
+%{_mandir}/man1/asciiloscope.1*
 
 %changelog
+* Tue Feb 10 2026 Pedro Augusto <pedroaugustop@protonmail.com> - 1.0.1-1
+- Added official manpage documentation
+
 * Mon Feb 09 2026 Pedro Augusto <pedroaugustop@protonmail.com> - 1.0.0-1
 - Initial Gold Master release
