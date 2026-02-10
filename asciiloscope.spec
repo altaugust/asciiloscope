@@ -17,17 +17,14 @@ Asciiloscope is a terminal-based audio visualizer that simulates the aesthetic
 of vintage CRT oscilloscopes using ASCII characters.
 
 %prep
-# O COPR build-scm já baixa o código, mas o %setup garante que entramos na pasta certa
-%setup -c -T
+%setup -q -n asciiloscope-main
 
 %build
-# Compilação padrão via CMake
 %cmake
 %cmake_build
 
 %install
 %cmake_install
-# Garante a instalação do manual que você criou
 install -Dp -m 644 debian/asciiloscope.1 %{buildroot}%{_mandir}/man1/asciiloscope.1
 
 %files
